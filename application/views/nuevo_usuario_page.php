@@ -27,6 +27,16 @@
                         </div>
                     </div>
                     <!--Mensaje error-->
+                    <?php if($this->session->flashdata('error_msg')){ ?>
+                    <div class="text-center">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong><?=@$this->session->flashdata('error_msg');?></strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <?php } ?>
                     <!---->
                     <?=form_open('Nuevo_usuario/crear_usuario');?>
                     <div class="form-group">
@@ -140,10 +150,9 @@
                                 <p>Si quieres subir contendio, debes seleccionar "Profesor" de lo contrario sería
                                     "Estudiante".</p>
                                 <label for="pPrivilegios">¿Quieres subir contenido a la plataforma? (*)</label>
-                                <select class="form-control" placeholder="Estudiante/Profesor" type="pPrivilegios"
-                                    name="pPrivilegios">
-                                    <option value="">Estudiante</option>
-                                    <option value="">Profesor</option>
+                                <select class="form-control" id="pPrivilegios" name="pPrivilegios">
+                                    <option>Estudiante</option>
+                                    <option>Profesor</option>
                                 </select>
                                 <small
                                     class="text-help text-danger"><?=@$this->session->flashdata('errores')['pPrivilegios'];?>
@@ -170,16 +179,16 @@
     </div>
 
     <footer class="py-5">
-            <div class="container">
-                <div class="row align-items-center justify-content-xl-between">
-                    <div class="col-xl-12">
-                        <div class="copyright text-center text-muted">
-                            © 2021 <a href="https://upsrj.edu.mx/ingenieria-en-software/" class="font-weight-bold ml-1"
-                                target="_blank">UPSRJ - Ing. Software - SW14 </a>
-                        </div>
+        <div class="container">
+            <div class="row align-items-center justify-content-xl-between">
+                <div class="col-xl-12">
+                    <div class="copyright text-center text-muted">
+                        © 2021 <a href="https://upsrj.edu.mx/ingenieria-en-software/" class="font-weight-bold ml-1"
+                            target="_blank">UPSRJ - Ing. Software - SW14 </a>
                     </div>
                 </div>
             </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
