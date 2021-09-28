@@ -1,16 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Access extends MY_RootController {
+class Nuevo_usuario extends MY_RootController {
 
 	function __construct(){
 		parent::__construct();
 	}
 
 	public function index(){
-		$this->_check_session();
-		$this->load->view('access_page');
+		$this->load->view('nuevo_usuario_page');
 	}
+	
   function doLogin(){
 	  $this->form_validation->set_rules('pEmail','Email','required');
 	  $this->form_validation->set_rules('pPassword','Password','required');
@@ -35,15 +35,12 @@ class Access extends MY_RootController {
 		  redirect('access');
 	  }
   }
-	public function logout(){
-		$this->session->unset_userdata('sw14_sess');
-    redirect('access','refresh');
-	}
 
-	public function _check_session(){
-			$session = $this->session->userdata('sw14_sess');
-			if (@$session['sess_email'] && !$this->input->is_ajax_request() ) {
-					redirect ( 'home' );
-			}
-	}
+
+  public function crear_usuario(){
+	$this->form_validation->set_rules('pEmail','Email','required');
+	$this->form_validation->set_rules('pPassword','Password','required');
+	
+  }
+
 }

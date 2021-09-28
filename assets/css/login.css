@@ -1,0 +1,16 @@
+body{
+    background: #6a11cb;
+}
+
+.card{
+    color: whitesmoke;
+    background-color:rgb(26, 24, 24);
+}
+
+
+
+.form-control{
+    outline: none;
+    background-color: #dfe;
+    border: 0;
+}

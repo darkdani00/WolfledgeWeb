@@ -9,7 +9,7 @@ class MY_RootController extends CI_Controller {
     }
 
     public function _isAuth() {
-    	$session = $this->session->userdata('almacen_sw14_sess');
+    	$session = $this->session->userdata('sw14_sess');
     	if ( ! @$session ['sess_email'] && !$this->input->is_ajax_request() ) {
     		redirect ( 'access' );
     	} else if( ! @$session ['sess_email']  && $this->input->is_ajax_request() ) {
