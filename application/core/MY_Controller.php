@@ -5,7 +5,6 @@ if (! defined ( 'BASEPATH' ))
 class MY_RootController extends CI_Controller {
     function __construct(){
         parent::__construct();
-        $this->load->library('encryption');
     }
 
     public function _isAuth() {

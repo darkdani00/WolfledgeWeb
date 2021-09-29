@@ -9,6 +9,7 @@ class Nuevo_usuario extends MY_RootController {
 
 	public function index(){
 		$this->load->view('nuevo_usuario_page');
+		$session = $this->session->userdata('sw14_sess');	
 	}
 	
   public function crear_usuario(){

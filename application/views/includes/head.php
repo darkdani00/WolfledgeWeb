@@ -4,7 +4,7 @@
   <title>
     <?=@$title ? $title :  'Sin título';?>
   </title>
-  <link href="<?=base_url('assets/img/brand/favicon.png');?>" rel="icon" type="image/png">
+  <link href="<?=base_url('assets/img/brand/wolf.png');?>" rel="icon" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="<?=base_url('assets/js/plugins/nucleo/css/nucleo.css');?>" rel="stylesheet" />
   <link href="<?=base_url('assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css');?>" rel="stylesheet" />
